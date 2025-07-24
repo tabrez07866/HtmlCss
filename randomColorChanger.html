@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+</head>
+<body style="text-align: center; padding-top: 50px;">
+     <h1>💕 Random Background Color</h1>
+     <button style="border-radius: 5px; padding: 5px; border-radius: 2px solid white; background-color: black; font: bold; color: wheat; font-size: 15px;" id="changeColorBtn">Change Background Color</button>   
+     <p id="colorCode"></p> 
+
+     <script>
+          const btn=document.getElementById("changeColorBtn")
+          const colorDisplay=document.getElementById("colorCode")
+
+          function getrandomColor(){
+            const r=Math.floor(Math.random()*256)
+            const g=Math.floor(Math.random()*256)
+            const b=Math.floor(Math.random()*256)
+            return `rgb(${r},${g},${b})`;
+          }
+
+          btn.addEventListener("click",()=>{
+            const newColor=getrandomColor()
+            document.body.style.backgroundColor=newColor;
+            colorDisplay.innerText="Current Color: "+newColor;
+            btn.style.color="red"
+            btn.style.fontSize="45px"
+
+            
+          });
+
+     </script>
+
+</body>
+</html>

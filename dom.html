@@ -1,0 +1,75 @@
+<!--
+### 🧠 What Is the DOM?
+
+1) The DOM is a tree-like structure of a web page.
+
+2) It represents HTML elements as objects that JavaScript can interact with.
+
+
+
+-->
+
+<!--
+1 ====>> Basics of DOM
+
+document.getElementById()
+
+document.getElementsByClassName()
+
+document.getElementsByTagName()
+
+document.querySelector() / querySelectorAll()
+
+2 =====>>  DOM Manipulation
+
+.innerText, .innerHTML, .textContent
+
+.style for inline CSS
+
+.classList methods: add, remove, toggle
+
+3 =====>> Events and Event Listeners
+
+addEventListener("click", ...)
+
+mouseover, keydown, submit, etc.
+
+4 =====>>Create/Remove Elements
+
+document.createElement()
+
+.appendChild()
+
+.remove()
+
+5 ======>>  DOM Traversal
+
+.parentElement, .children, .nextElementSibling, .previousElementSibling
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Hello DOM!</h1>
+    <p class="desc">Click the button to change this text</p>
+    <button id="changeBtn">Change text</button>
+
+    <script>
+
+        const heading=document.getElementById("heading")
+        const desc=document.querySelector(".desc")
+        const button=document.getElementById("changeBtn")
+        
+        button.addEventListener("click",()=>{
+            heading.innerText="DOM Updated"
+            desc.innerText="You changed the text"
+        })
+    </script>
+</body>
+</html>
