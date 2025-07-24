@@ -15,9 +15,15 @@ em =====>>
 3) Compounding effect in nested elements */
 html{
     font-size: 16px;
+    
+   
+}
+.main{
+    /* display: none; */
 }
 .parent{
     font-size:1.5rem;
+    
 }
 
 
@@ -56,9 +62,11 @@ For width/height: % of parent's width/height */
 }
 .child1{
     font-size:50%;
+  
 }
 .grand1{
     font-size: 50%;
+      
 }
 
 
